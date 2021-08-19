@@ -1,0 +1,240 @@
+body {
+  background-color: #F0F3F4;
+  padding: 50px 0;
+  font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI", "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #D2DCDF;
+  padding: 2px;
+  background-color: #fff;
+}
+
+.avatar .avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.avatar.avatar-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar.avatar-overlay:after {
+  position: absolute;
+  content: '';
+  background: rgba(255, 255, 255, 0.8);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.avatar.avatar-overlay .overlay-image {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 1;
+}
+
+.item-content a {
+  position: relative;
+  display: inline-block;
+}
+
+.item-name {
+  background-color: #7266BA;
+  padding: 2px 5px;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 4px;
+  margin-top: 6px;
+  font-size: 12px;
+  width: 60px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.has-child > .item-content {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.has-child > .item-content:after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  background-color: #D2DCDF;
+  height: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.item-right,
+.item-left {
+  position: relative;
+  padding-top: 15px;
+}
+
+.item-left:after, .item-left:before {
+  position: absolute;
+  content: '';
+  background-color: #D2DCDF;
+  z-index: -1;
+  top: 0;
+}
+
+.item-left:after {
+  width: 50%;
+  height: 2px;
+  right: 0;
+}
+
+.item-left:before {
+  width: 2px;
+  height: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item-right:after, .item-right:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  background-color: #D2DCDF;
+  z-index: -1;
+}
+
+.item-right:after {
+  width: 50%;
+  height: 2px;
+  left: 0;
+}
+
+.item-right:before {
+  width: 2px;
+  height: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-add {
+  color: #9a90db;
+}
+
+.item-add-form {
+  position: relative;
+  margin-top: 100px;
+  padding-top: 15px;
+  display: none;
+}
+
+.item-add-form:before {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 15px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #D2DCDF;
+}
+
+.item-target:before {
+  display: none;
+}
+
+.item-target .item-content,
+.item-target .btn-add {
+  display: none;
+}
+
+.item-popup {
+  display: none;
+}
+
+.member-tree-container .popover {
+  position: absolute;
+  top: 0;
+  min-width: 280px;
+  background-color: #fff;
+  border-radius: 4px;
+  left: 100%;
+  z-index: 2;
+  color: #212529;
+  box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
+  border-color: #D2DCDF;
+}
+
+.member-tree-container .popover .popover-body {
+  padding: 0 !important;
+}
+
+.member-tree-container .popover .arrow:before {
+  border-right-color: #D2DCDF;
+  border-left-color: #D2DCDF;
+}
+
+.member-tree-container .popover .item-popup-body {
+  padding: 1rem;
+  background-color: #F0F3F4;
+}
+
+.member-tree-container .popover .item-popup-body .table {
+  font-size: 14px;
+}
+
+.member-tree-container .popover .item-popup-body .table td {
+  padding-left: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.member-tree-container .popover .popup-footer {
+  font-size: 12px;
+  text-align: left;
+  padding: 8px 16px;
+}
+
+.line-horizontal,
+.line-vertical {
+  position: absolute;
+  background-color: #D2DCDF;
+}
+
+.line-vertical {
+  width: 2px;
+}
+
+.line-horizontal {
+  height: 2px;
+}
+
+@media (min-width: 992px) {
+  .avatar {
+    width: 76px;
+    height: 76px;
+    padding: 4px;
+  }
+  .item-name {
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .member-tree-container {
+    width: 800px;
+  }
+}
